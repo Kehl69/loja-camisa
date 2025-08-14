@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja de Camisas de Time</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header h1 {
+            margin: 0;
+        }
+        nav a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .produtos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+        .produto {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            width: 200px;
+            margin: 10px;
+            text-align: center;
+            padding: 15px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .produto img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        .produto h3 {
+            margin: 10px 0;
+            font-size: 1.1em;
+        }
+        .produto p {
+            color: #333;
+            font-size: 1.2em;
+            margin: 5px 0;
+        }
+        .produto button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 10px;
+            width: 100%;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+        .produto button:hover {
+            background-color: #218838;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Loja de Camisas de Time</h1>
+        <nav>
+            <a href="#">Início</a>
+            <a href="#">Carrinho 🛒 (0)</a>
+        </nav>
+    </header>
+<!-- Barra de categorias -->
+<div class="categorias">
+    <a href="#">Início</a>
+    <a href="#">Seleções ▼</a>
+    <a href="#">Brasileirão ▼</a>
+    <a href="#">Premier League ▼</a>
+    <a href="#">La Liga ▼</a>
+    <a href="#">Bundesliga ▼</a>
+    <a href="#">Serie A ▼</a>
+    <a href="#">Ligue 1 ▼</a>
+    <a href="#">Outras Ligas ▼</a>
+</div>
+
+<!-- Espaço para banner -->
+<div class="banner">
+    <img src="seu-banner.png" alt="Banner promocional">
+</div>
+
+<style>
+    .categorias {
+        background-color: #222;
+        overflow-x: auto;
+        white-space: nowrap;
+        padding: 10px 0;
+        text-align: center;
+    }
+    .categorias a {
+        display: inline-block;
+        color: white;
+        padding: 10px 15px;
+        text-decoration: none;
+        font-size: 0.9em;
+    }
+    .categorias a:hover {
+        background-color: #555;
+        border-radius: 5px;
+    }
+
+    /* Estilo do banner */
+    .banner {
+        margin: 20px auto; /* espaço acima e abaixo */
+        text-align: center;
+    }
+    .banner img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 5px; /* opcional, deixa cantos arredondados */
+    }
+</style>
+    <section class="produtos">
+        <div class="produto">
+            <img src="https://via.placeholder.com/200" alt="Camisa do Brasil">
+            <h3>Camisa do Brasil</h3>
+            <p>R$ 199,90</p>
+            <button>Adicionar ao Carrinho</button>
+        </div>
+        <div class="produto">
+            <img src="https://via.placeholder.com/200" alt="Camisa da Argentina">
+            <h3>Camisa da Argentina</h3>
+            <p>R$ 179,90</p>
+            <button>Adicionar ao Carrinho</button>
+        </div>
+        <div class="produto">
+            <img src="https://via.placeholder.com/200" alt="Camisa do Chile">
+            <h3>Camisa do Chile</h3>
+            <p>R$ 169,90</p>
+            <button>Adicionar ao Carrinho</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>Loja de Camisas de Time - Todos os direitos reservados</p>
+    </footer>
+</body>
+</html>
