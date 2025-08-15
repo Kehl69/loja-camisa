@@ -31,6 +31,37 @@
         nav a:hover {
             text-decoration: underline;
         }
+        .categorias {
+            background-color: #222;
+            overflow-x: auto;
+            white-space: nowrap;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .categorias a {
+            display: inline-block;
+            color: white;
+            padding: 10px 15px;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+        .categorias a:hover {
+            background-color: #555;
+            border-radius: 5px;
+        }
+
+        .banner {
+            width: 100%;
+            margin: 0;
+        }
+
+        .banner img {
+            width: 100%;
+            height: auto;
+            border-radius: 0; 
+            display: block; 
+        }
+
         .produtos {
             display: flex;
             flex-wrap: wrap;
@@ -88,58 +119,25 @@
         <h1>Loja de Camisas de Time</h1>
         <nav>
             <a href="#">Início</a>
-            <a href="#">Carrinho 🛒 (0)</a>
+            <a href="#" id="carrinho">Carrinho 🛒 (0)</a>
         </nav>
     </header>
-<!-- Barra de categorias -->
-<div class="categorias">
-    <a href="#">Início</a>
-    <a href="#">Seleções ▼</a>
-    <a href="#">Brasileirão ▼</a>
-    <a href="#">Premier League ▼</a>
-    <a href="#">La Liga ▼</a>
-    <a href="#">Bundesliga ▼</a>
-    <a href="#">Serie A ▼</a>
-    <a href="#">Ligue 1 ▼</a>
-    <a href="#">Outras Ligas ▼</a>
-</div>
 
+    <div class="categorias">
+        <a href="#">Seleções ▼</a>
+        <a href="#">Brasileirão ▼</a>
+        <a href="#">Premier League ▼</a>
+        <a href="#">La Liga ▼</a>
+        <a href="#">Bundesliga ▼</a>
+        <a href="#">Serie A ▼</a>
+        <a href="#">Ligue 1 ▼</a>
+        <a href="#">Outras Ligas ▼</a>
+    </div>
 
-<div class="banner">
-    <img src="seu-banner.png" alt="Banner promocional">
-</div>
+    <div class="banner">
+        <img src="imagem/banner para loja online de camisas ofertas exclusivas por tempo limitado.png" alt="Banner promocional">
+    </div>
 
-<style>
-    .categorias {
-        background-color: #222;
-        overflow-x: auto;
-        white-space: nowrap;
-        padding: 10px 0;
-        text-align: center;
-    }
-    .categorias a {
-        display: inline-block;
-        color: white;
-        padding: 10px 15px;
-        text-decoration: none;
-        font-size: 0.9em;
-    }
-    .categorias a:hover {
-        background-color: #555;
-        border-radius: 5px;
-    }
-
-   
-    .banner {
-        margin: 20px auto; 
-        text-align: center;
-    }
-    .banner img {
-        max-width: 100%;
-        height: auto;
-        border-radius: 5px; 
-    }
-</style>
     <section class="produtos">
         <div class="produto">
             <img src="https://via.placeholder.com/200" alt="Camisa do Brasil">
@@ -164,5 +162,18 @@
     <footer>
         <p>Loja de Camisas de Time - Todos os direitos reservados</p>
     </footer>
+
+    <script>
+        const botoes = document.querySelectorAll('.produto button');
+        const carrinho = document.getElementById('carrinho');
+        let contador = 0;
+
+        botoes.forEach(botao => {
+            botao.addEventListener('click', () => {
+                contador++;
+                carrinho.textContent = `Carrinho 🛒 (${contador})`;
+            });
+        });
+    </script>
 </body>
 </html>
