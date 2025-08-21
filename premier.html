@@ -22,10 +22,12 @@
         justify-content: space-between;
         align-items: center;
         padding: 0 10px;
+        flex-wrap: wrap;
     }
     .nav-left, .nav-right {
         display: flex;
         align-items: center;
+        flex-wrap: wrap;
     }
     .nav-right a {
         color: white;
@@ -50,8 +52,7 @@
         color: black;
     }
     .dropdown {
-        float: none;
-        overflow: hidden;
+        position: relative;
     }
     .dropdown .dropbtn {
         font-size: 16px;
@@ -73,7 +74,6 @@
         z-index: 1;
     }
     .dropdown-content a {
-        float: none;
         color: black;
         padding: 12px 16px;
         text-decoration: none;
@@ -129,7 +129,7 @@
         color: white;
         text-align: center;
         padding: 10px;
-        position: fixed;
+        position: relative;
         bottom: 0;
         width: 100%;
     }
@@ -138,10 +138,37 @@
         margin: 20px 0;
         color: #333;
     }
+
+    @media (max-width: 768px) {
+        nav {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .nav-left, .nav-right {
+            flex-direction: column;
+            width: 100%;
+        }
+        .nav-right a {
+            margin-left: 0;
+            width: 100%;
+            text-align: left;
+        }
+        .products {
+            flex-direction: column;
+            align-items: center;
+        }
+        .product {
+            width: 90%;
+        }
+        footer {
+            position: relative;
+        }
+    }
 </style>
+</head>
 <body>
       <header>
-        <h1>Loja de Camisas de Time</h1>
+        <h1>Camisas do Kehl</h1>
     </header>
     
 <nav>
@@ -225,7 +252,6 @@
         <a href="#">Carrinho 🛒</a>
     </div>
 </nav>
-
 
     <h2 class="page-title">Camisas da Premier League</h2>
     
