@@ -22,10 +22,12 @@
         justify-content: space-between;
         align-items: center;
         padding: 0 10px;
+        flex-wrap: wrap;
     }
     .nav-left, .nav-right {
         display: flex;
         align-items: center;
+        flex-wrap: wrap;
     }
     .nav-right a {
         color: white;
@@ -138,6 +140,50 @@
         margin: 20px 0;
         color: #333;
     }
+
+    @media (max-width: 768px) {
+        nav {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .nav-left, .nav-right {
+            flex-direction: column;
+            width: 100%;
+        }
+        .nav-right a {
+            margin-left: 0;
+            width: 100%;
+            text-align: left;
+        }
+        .products {
+            flex-direction: column;
+            align-items: center;
+        }
+        .product {
+            width: 90%;
+        }
+        footer {
+            position: relative;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .dropdown .dropbtn {
+            padding: 10px;
+            font-size: 14px;
+        }
+        .nav-right a {
+            padding: 10px;
+            font-size: 14px;
+        }
+        .price {
+            font-size: 16px;
+        }
+        .add-to-cart {
+            padding: 8px 12px;
+            font-size: 14px;
+        }
+    }
 </style>
 </head>
 <body>
@@ -155,7 +201,6 @@
                     <a href="#">França</a>
                 </div>
             </div>
-            
             <div class="dropdown">
                 <button class="dropbtn">Brasileirão ▼</button>
                 <div class="dropdown-content">
@@ -165,7 +210,6 @@
                     <a href="#">Corinthians</a>
                 </div>
             </div>
-            
             <div class="dropdown">
                 <button class="dropbtn">Premier League ▼</button>
                 <div class="dropdown-content">
@@ -174,7 +218,6 @@
                     <a href="#">Chelsea</a>
                 </div>
             </div>
-            
             <div class="dropdown">
                 <button class="dropbtn">La Liga ▼</button>
                 <div class="dropdown-content">
@@ -183,7 +226,6 @@
                     <a href="#">Atlético de Madrid</a>
                 </div>
             </div>
-            
             <div class="dropdown">
                 <button class="dropbtn">Bundesliga ▼</button>
                 <div class="dropdown-content">
@@ -192,7 +234,6 @@
                     <a href="#">Bayer Leverkusen</a>
                 </div>
             </div>
-            
             <div class="dropdown">
                 <button class="dropbtn">Serie A ▼</button>
                 <div class="dropdown-content">
@@ -201,7 +242,6 @@
                     <a href="#">Inter de Milão</a>
                 </div>
             </div>
-            
             <div class="dropdown">
                 <button class="dropbtn">Ligue 1 ▼</button>
                 <div class="dropdown-content">
@@ -210,7 +250,6 @@
                     <a href="#">Lyon</a>
                 </div>
             </div>
-            
             <div class="dropdown">
                 <button class="dropbtn">Outras Ligas ▼</button>
                 <div class="dropdown-content">
@@ -237,7 +276,6 @@
         <p class="price">R$ 219,90</p>
         <button class="add-to-cart">Adicionar ao Carrinho</button>
     </div>
-
     <div class="product">
         <img src="gremio.png" alt="Camisa do Grêmio">
         <h3>Camisa do Grêmio</h3>
@@ -245,7 +283,6 @@
         <p class="price">R$ 209,90</p>
         <button class="add-to-cart">Adicionar ao Carrinho</button>
     </div>
-
     <div class="product">
         <img src="inter.png" alt="Camisa do Internacional">
         <h3>Camisa do Internacional</h3>
@@ -255,9 +292,8 @@
     </div>
 </div>
 
-    
-    <footer>
-        Loja de Camisas de Time - Todos os direitos reservados
-    </footer>
+<footer>
+    Loja de Camisas de Time - Todos os direitos reservados
+</footer>
 </body>
 </html>
