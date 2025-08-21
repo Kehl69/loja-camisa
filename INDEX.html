@@ -16,16 +16,19 @@
         padding: 15px;
         text-align: center;
     }
+
     nav {
         background-color: #333;
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding: 0 10px;
+        flex-wrap: wrap; 
     }
     .nav-left, .nav-right {
         display: flex;
         align-items: center;
+        flex-wrap: wrap;
     }
     .nav-right a {
         color: white;
@@ -86,22 +89,25 @@
     .dropdown:hover .dropdown-content {
         display: block;
     }
+
     .banner {
         width: 100%;
         margin: 0;
         text-align: center;
     }
+
     .products {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
         padding: 20px;
+        justify-items: center;
     }
     .product {
         border: 1px solid #ddd;
-        margin: 10px;
         padding: 15px;
-        width: 250px;
+        width: 100%;
+        max-width: 250px;
         text-align: center;
     }
     .product img {
@@ -124,6 +130,7 @@
     .add-to-cart:hover {
         background-color: #45a049;
     }
+
     footer {
         background-color: #1a1a1a;
         color: white;
@@ -132,6 +139,40 @@
         position: fixed;
         bottom: 0;
         width: 100%;
+    }
+
+    
+    @media (max-width: 768px) {
+        nav {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .nav-left, .nav-right {
+            flex-direction: column;
+            width: 100%;
+        }
+        .nav-right a {
+            margin-left: 0;
+            width: 100%;
+            text-align: left;
+        }
+    }
+
+    @media (max-width: 480px) {
+        header h1 {
+            font-size: 20px;
+        }
+        .dropbtn {
+            font-size: 14px;
+            padding: 10px;
+        }
+        .product {
+            max-width: 100%;
+        }
+        footer {
+            font-size: 14px;
+            position: relative;
+        }
     }
 </style>
 </head>
@@ -227,29 +268,28 @@
     </div>
     
     <div class="products">
-    <div class="product" id="brasil">
-        <img src="camisa brasil.png" alt="Camisa do Brasil">
-        <h3>Camisa do Brasil</h3>
-        <p class="price">R$ 199,90</p>
-        <button class="add-to-cart">Adicionar ao Carrinho</button>
+        <div class="product" id="brasil">
+            <img src="camisa brasil.png" alt="Camisa do Brasil">
+            <h3>Camisa do Brasil</h3>
+            <p class="price">R$ 199,90</p>
+            <button class="add-to-cart">Adicionar ao Carrinho</button>
+        </div>
+
+        <div class="product" id="argentina">
+            <img src="camisa argentina.png" alt="Camisa da Argentina">
+            <h3>Camisa da Argentina</h3>
+            <p class="price">R$ 179,90</p>
+            <button class="add-to-cart">Adicionar ao Carrinho</button>
+        </div>
+
+        <div class="product" id="franca">
+            <img src="camisa coreia.png" alt="Camisa da Coreia">
+            <h3>Camisa da Coreia</h3>
+            <p class="price">R$ 169,90</p>
+            <button class="add-to-cart">Adicionar ao Carrinho</button>
+        </div>
     </div>
 
-    <div class="product" id="argentina">
-        <img src="camisa argentina.png" alt="Camisa da Argentina">
-        <h3>Camisa da Argentina</h3>
-        <p class="price">R$ 179,90</p>
-        <button class="add-to-cart">Adicionar ao Carrinho</button>
-    </div>
-
-    <div class="product" id="franca">
-        <img src="camisa coreia.png" alt="Camisa da Coreia">
-        <h3>Camisa da Coreia</h3>
-        <p class="price">R$ 169,90</p>
-        <button class="add-to-cart">Adicionar ao Carrinho</button>
-    </div>
-</div>
-
-    
     <footer>
         Loja de Camisas de Time - Todos os direitos reservados
     </footer>
