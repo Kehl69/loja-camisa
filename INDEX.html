@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Loja de Camisas de Time</title>
+    <title>Brasileirão - Loja de Camisas de Time</title>
 <style>
     body {
         font-family: Arial, sans-serif;
@@ -22,10 +22,12 @@
         justify-content: space-between;
         align-items: center;
         padding: 0 10px;
+        flex-wrap: wrap;
     }
     .nav-left, .nav-right {
         display: flex;
         align-items: center;
+        flex-wrap: wrap;
     }
     .nav-right a {
         color: white;
@@ -50,8 +52,7 @@
         color: black;
     }
     .dropdown {
-        float: none;
-        overflow: hidden;
+        position: relative;
     }
     .dropdown .dropbtn {
         font-size: 16px;
@@ -73,7 +74,6 @@
         z-index: 1;
     }
     .dropdown-content a {
-        float: none;
         color: black;
         padding: 12px 16px;
         text-decoration: none;
@@ -133,11 +133,42 @@
         bottom: 0;
         width: 100%;
     }
+    .page-title {
+        text-align: center;
+        margin: 20px 0;
+        color: #333;
+    }
+
+    @media (max-width: 768px) {
+        nav {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .nav-left, .nav-right {
+            flex-direction: column;
+            width: 100%;
+        }
+        .nav-right a {
+            margin-left: 0;
+            width: 100%;
+            text-align: left;
+        }
+        .products {
+            flex-direction: column;
+            align-items: center;
+        }
+        .product {
+            width: 90%;
+        }
+        footer {
+            position: relative; 
+        }
+    }
 </style>
 </head>
 <body>
     <header>
-        <h1>Loja de Camisas de Time</h1>
+        <h1>Camisas do Kehl</h1>
     </header>
     
     <nav>
@@ -145,9 +176,9 @@
             <div class="dropdown">
                 <button class="dropbtn">Seleções ▼</button>
                 <div class="dropdown-content">
-                    <a href="index.html#brasil">Brasil</a>
-                    <a href="index.html#argentina">Argentina</a>
-                    <a href="index.html#franca">França</a>
+                    <a href="#">Brasil</a>
+                    <a href="#">Argentina</a>
+                    <a href="#">França</a>
                 </div>
             </div>
             
@@ -155,63 +186,63 @@
                 <button class="dropbtn">Brasileirão ▼</button>
                 <div class="dropdown-content">
                     <a href="brasileirao.html">Todos os Times</a>
-                    <a href="brasileirao.html#flamengo">Flamengo</a>
-                    <a href="brasileirao.html#palmeiras">Palmeiras</a>
-                    <a href="brasileirao.html#corinthians">Corinthians</a>
+                    <a href="#">Flamengo</a>
+                    <a href="#">Palmeiras</a>
+                    <a href="#">Corinthians</a>
                 </div>
             </div>
             
             <div class="dropdown">
                 <button class="dropbtn">Premier League ▼</button>
                 <div class="dropdown-content">
-                    <a href="premier-league.html#manchester-united">Manchester United</a>
-                    <a href="premier-league.html#liverpool">Liverpool</a>
-                    <a href="premier-league.html#chelsea">Chelsea</a>
+                    <a href="#">Manchester United</a>
+                    <a href="#">Liverpool</a>
+                    <a href="#">Chelsea</a>
                 </div>
             </div>
             
             <div class="dropdown">
                 <button class="dropbtn">La Liga ▼</button>
                 <div class="dropdown-content">
-                    <a href="laliga.html#barcelona">Barcelona</a>
-                    <a href="laliga.html#real-madrid">Real Madrid</a>
-                    <a href="laliga.html#atletico-madrid">Atlético de Madrid</a>
+                    <a href="#">Barcelona</a>
+                    <a href="#">Real Madrid</a>
+                    <a href="#">Atlético de Madrid</a>
                 </div>
             </div>
             
             <div class="dropdown">
                 <button class="dropbtn">Bundesliga ▼</button>
                 <div class="dropdown-content">
-                    <a href="bundesliga.html#bayern">Bayern de Munique</a>
-                    <a href="bundesliga.html#dortmund">Borussia Dortmund</a>
-                    <a href="bundesliga.html#leverkusen">Bayer Leverkusen</a>
+                    <a href="#">Bayern de Munique</a>
+                    <a href="#">Borussia Dortmund</a>
+                    <a href="#">Bayer Leverkusen</a>
                 </div>
             </div>
             
             <div class="dropdown">
                 <button class="dropbtn">Serie A ▼</button>
                 <div class="dropdown-content">
-                    <a href="seriea.html#juventus">Juventus</a>
-                    <a href="seriea.html#milan">Milan</a>
-                    <a href="seriea.html#inter">Inter de Milão</a>
+                    <a href="#">Juventus</a>
+                    <a href="#">Milan</a>
+                    <a href="#">Inter de Milão</a>
                 </div>
             </div>
             
             <div class="dropdown">
                 <button class="dropbtn">Ligue 1 ▼</button>
                 <div class="dropdown-content">
-                    <a href="ligue1.html#psg">PSG</a>
-                    <a href="ligue1.html#marseille">Olympique de Marseille</a>
-                    <a href="ligue1.html#lyon">Lyon</a>
+                    <a href="#">PSG</a>
+                    <a href="#">Olympique de Marseille</a>
+                    <a href="#">Lyon</a>
                 </div>
             </div>
             
             <div class="dropdown">
                 <button class="dropbtn">Outras Ligas ▼</button>
                 <div class="dropdown-content">
-                    <a href="mls.html">MLS</a>
-                    <a href="ligamx.html">Liga MX</a>
-                    <a href="eredivisie.html">Eredivisie</a>
+                    <a href="#">MLS</a>
+                    <a href="#">Liga MX</a>
+                    <a href="#">Eredivisie</a>
                 </div>
             </div>
         </div>
@@ -222,29 +253,30 @@
         </div>
     </nav>
 
-    <div class="banner">
-        <img src="banner para loja online de camisas ofertas exclusivas por tempo limitado.png" alt="Banner da Loja" style="width:100%; height:auto;">
-    </div>
-    
-    <div class="products">
-    <div class="product" id="brasil">
-        <img src="camisa brasil.png" alt="Camisa do Brasil">
-        <h3>Camisa do Brasil</h3>
-        <p class="price">R$ 199,90</p>
+<h2 class="page-title">Camisas do Brasileirão</h2>
+
+<div class="products">
+    <div class="product">
+        <img src="sao.png" alt="Camisa do São Paulo">
+        <h3>Camisa do São Paulo</h3>
+        <p>Home - Temporada 2023/24</p>
+        <p class="price">R$ 219,90</p>
         <button class="add-to-cart">Adicionar ao Carrinho</button>
     </div>
 
-    <div class="product" id="argentina">
-        <img src="camisa argentina.png" alt="Camisa da Argentina">
-        <h3>Camisa da Argentina</h3>
-        <p class="price">R$ 179,90</p>
+    <div class="product">
+        <img src="gremio.png" alt="Camisa do Grêmio">
+        <h3>Camisa do Grêmio</h3>
+        <p>Home - Temporada 2023/24</p>
+        <p class="price">R$ 209,90</p>
         <button class="add-to-cart">Adicionar ao Carrinho</button>
     </div>
 
-    <div class="product" id="franca">
-        <img src="camisa coreia.png" alt="Camisa da Coreia">
-        <h3>Camisa da Coreia</h3>
-        <p class="price">R$ 169,90</p>
+    <div class="product">
+        <img src="inter.png" alt="Camisa do Internacional">
+        <h3>Camisa do Internacional</h3>
+        <p>Home - Temporada 2023/24</p>
+        <p class="price">R$ 209,90</p>
         <button class="add-to-cart">Adicionar ao Carrinho</button>
     </div>
 </div>
